@@ -24,11 +24,22 @@ while ch.lower() != 'n' and ch.lower() == 'y':
                                         print(r)
                                         
                     elif op=='/':
-                                        r = a/b 
-                                        print(r)
+                                        if b!=0:
+                                                            r = a/b 
+                                                            print(r)
+                                        else :
+                                                            print("denominator cannot be 0 for division")
 
                     else :
                                         print('enter a valid operation !!')  
-                    ch = input('do you wish to continue[y/n] : ')  
-                    if ch!='n'or ch!='y' :
-                                        print('please neter a valid choice')               
+                    k = input('do you wish to continue[y/n] : ')  
+                    if k.lower()!='n'and k.lower()!='y' :
+                                        while k.lower()!='n' and k.lower()!='y':
+                                                            print('please enter a valid choice')
+                                                            k = input('do you wish to continue[y/n] : ')
+                                                            if k.lower() =='n' or k.lower() == 'y':
+                                                                                ch = k    
+                    
+                    
+                    else :
+                                        ch = k           
